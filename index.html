@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Program THR Lebaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #333;
+        }
+        .thr-output {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #666;
+        }
+        .btn-generate {
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .btn-generate:hover {
+            background-color: #0069d9;
+        }
+    </style>
+    <script>
+        function generateThr() {
+            var thrOptions = [5000, 6000, 7000, 8000, 9000, 10000];
+            var thr = thrOptions[Math.floor(Math.random() * thrOptions.length)];
+            document.getElementById("thrOutput").innerHTML = "THR Lebaran Anda: Rp " + thr.toLocaleString();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Program THR Lebaran</h1>
+        <button class="btn-generate" onclick="generateThr()">Klik untuk Mendapatkan THR</button>
+        <p id="thrOutput" class="thr-output"></p>
+    </div>
+</body>
+</html>
