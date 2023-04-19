@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THR Lebaran</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        .card {
+            background-color: #f8f9fa;
+            border: none;
+            text-align: center;
+        }
+        .card-header {
+            background-color: #ededed;
+            font-weight: bold;
+            color: #444;
+            font-size: 24px;
+            padding: 20px;
+        }
+        .card-body {
+            font-size: 36px;
+            padding: 40px;
+        }
+        .btn {
+            background-color: #ffcccb;
+            color: #444;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header">
+                        Selamat Hari Raya!
+                    </div>
+                    <div class="card-body">
+                        <span id="thrAmount">0</span> IDR
+                    </div>
+                    <button class="btn btn-block" onclick="generateThr()">Dapatkan THR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function generateThr() {
+            var thrAmounts = [2000, 5000, 10000, 15000, 20000];
+            var randomIndex = Math.floor(Math.random() * thrAmounts.length);
+            var thr = thrAmounts[randomIndex];
+            document.getElementById("thrAmount").textContent = thr;
+        }
+    </script>
+</body>
+</html>
